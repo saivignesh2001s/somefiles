@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="Externalstyles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div class="container">
+    <div class="row">
+      <div class="col-sm-0"> </div>
+  <div class="col-md-0">
+<h2 class="class3">ADD FLIGHT DETAILS</h2>
+<form method="post" action="AddFlight">
+
+
+    <div class="form-group">
+        <label for="" class="class1"> Flight Id</label>
+        <input type="text" style="width:590px;" class="form-control" asp-for="flightid"   placeholder="Enter Flight Id" required>
+        
+    </div>
+    <div class="grid-container">
+    <div class="form-group" class="grid-item">
+        <label for="" class="class1">Departure Destination</label>
+        <input type="text" style="width:250px;"  class="form-control" asp-for="departure_destination" placeholder="Enter Depature destination">
+    </div>
+    <div class="form-group" class="grid-item" >
+        <label for="" class="class1">Departure Date</label>
+        <input type="datetime" style="width:250px;"  class="form-control" asp-for="departure_date" placeholder="Enter departure date">
+    </div>
+    <div class="form-group" class="grid-item">
+        <label for="" class="class1">Arrival Destination</label>
+        <input type="text" style="width:250px;" class="form-control" asp-for="arrival_destination" placeholder="Enter Arrival destination">
+    </div>
+   
+    <div class="form-group" class="grid-item">
+        <label for="" class="class1">Arrival Date</label>
+        <input type="datetime" style="width:250px;"  class="form-control" asp-for="arrival_date" placeholder="Enter Arrival date">
+       </div>
+   
+    </div>
+    <br>
+    <br>
+        <button style="border-radius: 30px; border: none; padding: 15px 20px; background-color:#92508f; color: white;margin-top:30px;" type="submit" class="btn12">Add Flight</button>
+    
+    <p style="color:green">@ViewBag.Message1</p>
+    <p style="color:red">@ViewBag.Message2</p>
+    
+    
+ </form>

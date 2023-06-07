@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="Externalstyles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div class="container">
+    <div class="row">
+      <div class="col-sm-0"> </div>
+  <div class="col-md-0">
+<h2 class="class3">Edit Flight</h2>
+<form method="post" action="Editflight">
+    <div class="grid-container">
+    <div class="form-group" class="grid-item" >
+    
+    <label for="" class="class1">Travel Id</label>
+    <input type="text" class="form-control" asp-for="id" readonly>
+
+    </div>
+    
+    <div class="form-group" class="grid-item"  >
+        <label for="" class="class1"> Flight Id</label>
+        <input type="text" class="form-control" asp-for="flightid" required >
+        
+    </div>
+    <div class="form-group" class="grid-item" >
+        <label for="" class="class1">Depature Destination</label>
+        <input type="text" class="form-control" asp-for="departure_destination">
+    </div>
+    <div class="form-group" class="grid-item"  >
+        <label for="" class="class1">Departure Date</label>
+        <input type="datetime" class="form-control" asp-for="departure_date" required>
+    </div>
+    <div class="form-group" class="grid-item"  >
+        <label for="" class="class1">Arrival Destination</label>
+        <input type="text" class="form-control" asp-for="arrival_destination">
+    </div>
+    
+    <div class="form-group" class="grid-item" >
+        <label for="" class="class1">Arrival Date</label>
+        <input type="datetime" class="form-control" asp-for="arrival_date" required>
+    </div>
+</div>
+
+    <br>
+    <br>
+    <div class="contain">
+    <button type="submit" class="btn btn-primary" class="btn">Submit</button>
+    <button type="submit" class="btn btn-danger" class="btn" asp-action="Deleteflight" asp-controller="Flight">Delete</button>
+    <button type="submit" class="btn btn-primary" class="btn" asp-action="Flightlist" asp-controller="Flight">Back to List</button>
+    </div>
+    <p style="color:red">@ViewBag.Message4</p>
+    <p style="color:red">@ViewBag.Message5</p>
+     <p style="color:red">@ViewBag.Message6</p>
+       
+
+</form>
